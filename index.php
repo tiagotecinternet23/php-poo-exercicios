@@ -16,7 +16,6 @@ $livroTecnico->setAutor("Fulano de Tal");
 $livroTecnico->setPaginas(250);
 $livroTecnico->setFormato(["digital"]);
 ?>
-
 <h2>Dados (Técnico)</h2>
 <p>Nome: <?=$livroTecnico->getTitulo()?> </p>
 <p>Autor: <?=$livroTecnico->getAutor()?> </p>
