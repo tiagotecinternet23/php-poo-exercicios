@@ -1,10 +1,3 @@
-<?php
-require_once "src/Livro.php";
-$livro = new Livro;
-$livro->setAutor("J.R.R. Tolkien");
-$livro->setTitulo("O Hobbit");
-$livro->setPaginas(300);
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,6 +8,20 @@ $livro->setPaginas(300);
 <body>
     <h1>Exercício 02 (corrigido)</h1>
     <hr>
-    
+<?php
+require_once "src/Tecnico.php";
+$livroTecnico = new Tecnico;
+$livroTecnico->setTitulo("Desenvolvimento de Sistemas");
+$livroTecnico->setAutor("Fulano de Tal");
+$livroTecnico->setPaginas(250);
+$livroTecnico->setFormato(["digital"]);
+?>
+
+<h2>Dados (Técnico)</h2>
+<p>Nome: <?=$livroTecnico->getTitulo()?> </p>
+<p>Autor: <?=$livroTecnico->getAutor()?> </p>
+<p>Formato: <?=$livroTecnico->getFormato()?> </p>
+
+
 </body>
 </html>
