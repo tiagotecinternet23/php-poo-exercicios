@@ -41,5 +41,21 @@ $livroDidatico->setNivel(["médio", "superior"]);
     } ?> 
 </p>
 
+<hr>
+
+<?php
+// Livro Programação
+require_once "src/Programacao.php";
+$livroProgramacao = new Programacao;
+$livroProgramacao->setTitulo("PHP8");
+$livroProgramacao->setAutor("Beltrano");
+$livroProgramacao->setFormato(["digital"]);
+$livroProgramacao->setArea("Back-End");
+?>
+<h2>Dados (Programação)</h2>
+<p>Nome: <?=$livroProgramacao->getTitulo()?> </p>
+<p>Formato: <?=$livroProgramacao->getFormato()?> </p>
+<p>Área: <?=$livroProgramacao->getArea()?> </p>
+
 </body>
 </html>
