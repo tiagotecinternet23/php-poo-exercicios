@@ -9,6 +9,7 @@
     <h1>Exercício 02 (corrigido)</h1>
     <hr>
 <?php
+// Livro Técnico
 require_once "src/Tecnico.php";
 $livroTecnico = new Tecnico;
 $livroTecnico->setTitulo("Desenvolvimento de Sistemas");
@@ -21,6 +22,24 @@ $livroTecnico->setFormato(["digital"]);
 <p>Autor: <?=$livroTecnico->getAutor()?> </p>
 <p>Formato: <?=$livroTecnico->getFormato()?> </p>
 
+<hr>
+
+<?php
+// Livro Didático
+require_once "src/Didatico.php";
+$livroDidatico = new Didatico;
+$livroDidatico->setTitulo("Literatura Moderna");
+$livroDidatico->setFormato(["digital", "fisico"]);
+$livroDidatico->setNivel(["médio", "superior"]);
+?>
+<h2>Dados (Didático)</h2>
+<p>Nome: <?=$livroDidatico->getTitulo()?> </p>
+<p>Formato: <?=$livroDidatico->getFormato()?> </p>
+<p>Nível: 
+    <?php foreach($livroDidatico->getNivel() as $nivel){
+        echo $nivel." ";
+    } ?> 
+</p>
 
 </body>
 </html>
