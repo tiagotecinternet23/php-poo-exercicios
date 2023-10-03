@@ -9,8 +9,17 @@
     <h1>Exercício 03 </h1>
     <hr>
 <?php
-// Livro Técnico
-require_once "src/Tecnico.php";
+// Use classe por classe, cada um em uma linha
+use Biblioteca\Didatico;
+use Biblioteca\Tecnico;
+use Biblioteca\Programacao;
+use Biblioteca\Web;
+
+// Use com lista de classes
+// use Biblioteca\{Didatico, Tecnico, Programacao};
+
+require_once "vendor/autoload.php";
+
 $livroTecnico = new Tecnico;
 $livroTecnico->setTitulo("Desenvolvimento de Sistemas");
 $livroTecnico->setAutor("Fulano de Tal");
@@ -25,8 +34,6 @@ $livroTecnico->setFormato(["digital"]);
 <hr>
 
 <?php
-// Livro Didático
-require_once "src/Didatico.php";
 $livroDidatico = new Didatico;
 $livroDidatico->setTitulo("Literatura Moderna");
 $livroDidatico->setFormato(["digital", "fisico"]);
@@ -44,8 +51,6 @@ $livroDidatico->setNivel(["médio", "superior"]);
 <hr>
 
 <?php
-// Livro Programação
-require_once "src/Programacao.php";
 $livroProgramacao = new Programacao;
 $livroProgramacao->setTitulo("PHP8");
 $livroProgramacao->setAutor("Beltrano");
@@ -56,6 +61,13 @@ $livroProgramacao->setArea("Back-End");
 <p>Nome: <?=$livroProgramacao->getTitulo()?> </p>
 <p>Formato: <?=$livroProgramacao->getFormato()?> </p>
 <p>Área: <?=$livroProgramacao->getArea()?> </p>
+
+<hr>
+
+<?php
+$livroWeb = new Web;
+var_dump($livroWeb);
+?>
 
 </body>
 </html>

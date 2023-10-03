@@ -1,0 +1,9 @@
+{
+    "name" : "tiago/php-poo-exercicios",
+    "description" : "Versão do exercício usando namespace e autoload de classes",
+    "autoload" : {
+        "psr-4": {
+            "Biblioteca\\" : "src/"
+        }
+    }
+}
