@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 02 (corrigido)</title>
+    <title>Exercício 03 </title>
 </head>
 <body>
-    <h1>Exercício 02 (corrigido)</h1>
+    <h1>Exercício 03 </h1>
     <hr>
 <?php
 // Livro Técnico
